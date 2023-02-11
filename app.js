@@ -10,31 +10,40 @@ const playRound = (playerSelection, computerSelection) => {
   computerSelection = computerSelection.toLowerCase();
 
   if (playerSelection == 'rock' && computerSelection == 'rock') {
-    return `Draw.`;
+    console.log(`Draw.`);
+    alert(`Draw`);
   } else
   if (playerSelection == 'rock' && computerSelection == 'paper') {
-    return `You lose! ${computerSelection} beats ${playerSelection}`;
+    console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+    alert(`You lost`);
   } else
   if (playerSelection == 'rock' && computerSelection == 'scissors') {
-    return `You win! ${playerSelection} beats ${computerSelection}`;
+    console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+    alert(`You won`);
   } else
   if (playerSelection == 'paper' && computerSelection == 'paper') {
-    return `Draw.`;
+    console.log(`Draw.`);
+    alert(`Draw`);
   } else
   if (playerSelection == 'paper' && computerSelection == 'rock') {
-    return `You win! ${playerSelection} beats ${computerSelection}`;
+    console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+    alert(`You won`);
   } else
   if (playerSelection == 'paper' && computerSelection == 'scissors') {
-    return `You lose! ${computerSelection} beats ${playerSelection}`;
+    console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+    alert(`You lost`);
   } else
   if (playerSelection == 'scissors' && computerSelection == 'scissors') {
-    return `Draw.`;
+    console.log(`Draw.`);
+    alert(`Draw`);
   } else
   if (playerSelection == 'scissors' && computerSelection == 'rock') {
-    return `You lose! ${computerSelection} beats ${playerSelection}`;
+    console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+    alert(`You lost`);
   } else
   if (playerSelection == 'scissors' && computerSelection == 'paper') {
-    return `You win! ${playerSelection} beats ${computerSelection}`;
+    console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+    alert(`You won`);
   }
 }
 
@@ -56,11 +65,15 @@ const game = () => {
   for (let i = 0; i < rounds; i++) {
     let playerMove = prompt(message);
     const result = playRound(playerMove, computerPlay());
-    if (result = output_1 || output_2 || output_3) {
+    if (result == output_1 || output_2 || output_3) {
       computerScore++;
+      console.log('Player: ', playerScore);
+      console.log('Computer: ', computerScore);
     } else
-    if (result = output_6 || output_7 || output_8) {
+    if (result == output_6 || output_7 || output_8) {
       playerScore++;
+      console.log('Player: ', playerScore);
+      console.log('Computer: ', computerScore);
     } else
     if (result = output_5) {
       continue;
